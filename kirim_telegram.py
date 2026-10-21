@@ -15,5 +15,3 @@ def kirim_telegram(pesan):
         print(response.status_code)
     except Exception: 
         print("gagal kirim telegram")
-
-kirim_telegram("tes job bot")

@@ -1,3 +1,5 @@
+from kirim_telegram import kirim_telegram
+
 def filter_lokasi(listings):
     hasil = []
     for listing in listings:
@@ -18,5 +20,8 @@ listings = [{"judul": "Programmer","perusahaan":"PT. Lestari Mulia Sentosa","lok
 print(len(listings))
 fil =  filter_lokasi(listings)
 print(len(fil))
+pesan = ""
 for p in fil:
-    print(f"{p['judul']} - {p['perusahaan']}")
+    pesan += f"{p['judul']} - {p['perusahaan']}\n"
+print(pesan)
+kirim_telegram(pesan)
