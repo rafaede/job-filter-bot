@@ -12,11 +12,18 @@ def filter_lokasi(listings):
 def tambah_listing(listings, judul, perusahaan, lokasi):
     listings.append({"judul":judul, "perusahaan":perusahaan, "lokasi":lokasi})
     return listings
- 
+
 with open("listings.json") as f:
     listings = json.load(f)
-          
+
+judul = input("Judul:")
+perusahaan = input("Perusahaan:")
+lokasi = input("Lokasi:")
+tambah_listing(listings,judul,perusahaan,lokasi)          
 print(len(listings))
+
+with open("listings.json", "w") as f:
+    json.dump(listings, f)
 
 fil =  filter_lokasi(listings)
 print(len(fil))
