@@ -1,12 +1,7 @@
-import requests
 import json
 
-response = requests.get("https://remotive.com/api/remote-jobs?category=software-dev")
-print(response.status_code)
-
-job = response.json()
-with open("remotive_cache.json", "w") as f:
-    json.dump(job, f)
+with open("remotive_cache.json", "r") as f:
+    job = json.load(f)
 
 print(len(job["jobs"]))
 
