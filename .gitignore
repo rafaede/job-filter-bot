@@ -1,3 +1,4 @@
 .env
 __pycache__/
 listings_backup.json
+remotive_cache.json
