@@ -1,4 +1,5 @@
 import json
+from kirim_telegram import kirim_telegram
 
 def filter_remotive(jobs):
     hasil = []
@@ -15,5 +16,11 @@ print(len(job["jobs"]))
 
 hasil = filter_remotive(job["jobs"][:10])
 
+pesan = ""
+
 for jobs in hasil:
-    print(f"Title : {jobs['title']}, Company Name : {jobs['company_name']}")
+    pesan += f"Title : {jobs['title']}, Company Name : {jobs['company_name']}\n"
+pesan += "Source: Remotive (https://remotive.com)"
+print(pesan)
+
+kirim_telegram(pesan)
