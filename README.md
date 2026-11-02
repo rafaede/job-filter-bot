@@ -2,10 +2,10 @@
 Take and filter listings
 
 Current:
-- Get data from Remotive, save to cache, filtering location and title
+- Get data from Remotive, save to cache, filter location and title
+- Send filtered results to Telegram
 
 Planned:
-- Send Remotive result to Telegram
 - Request Gemini assessment
 
 Data source: Remotive (https://remotive.com)
